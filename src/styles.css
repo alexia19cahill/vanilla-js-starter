@@ -1,0 +1,54 @@
+.texto{
+text-align:center ;
+
+
+}
+
+.btn{
+
+background-color: black;
+color: white;
+
+}
+
+body{
+
+    background-color:#ebf8ff;
+
+
+}
+
+.container{
+
+    background-color: white;
+    width: 500px;
+    height: 400px;
+    margin-left: 30%;
+    border: solid rgb(67, 67, 111) 2px;
+    overflow: auto;
+}
+
+.mover{
+ margin-left: 30%;
+}
+
+.moverT{
+    margin-left: 30%;
+}
+
+.linea{
+    height: 2px;
+    background-color: black;
+}
+
+#cuadro {
+    border: rgb(252, 188, 188) 2px solid;
+    border-radius: 3px;
+    width: 94%;
+    height: 40px;
+    margin-left: 3%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+}
