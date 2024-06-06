@@ -1,11 +1,8 @@
-import { verTareas,guardarTareas } from "./index.js";
+import { verTareas, guardarTareas } from "./index.js";
 
-
-const input = document.querySelector("input");
 const btn = document.querySelector(".btn");
 const father = document.getElementById("father");
 const quitar = document.querySelector(".quitar");
-
 let tareas = document.getElementById("tareas");
 
 promesaCumplida();
@@ -13,18 +10,32 @@ promesaCumplida();
 async function promesaCumplida() {
   let promesaCumplidas = await verTareas();
   for (let x = 0; x < promesaCumplidas.length; x++) {
-    console.log("ver", promesaCumplidas[x]);
+    console.log("prueba", promesaCumplidas[x]);
+
+    let cuadro = document.createElement("div");
+    cuadro.id = "cuadro";
+    father.appendChild(cuadro);
+
+    let checkox = document.createElement("input");
+    checkox.type = "checkbox";
+    cuadro.appendChild(checkox);
+
+    let h3 = document.createElement("h3")
+ 
+    // cuadro.appendChild(spaceText);
+    h3.innerHTML = promesaCumplidas[x].task;
+
+    cuadro.appendChild(h3)
+
+
   }
-
-
-
-
-
 }
-
 
 btn.addEventListener("click", (e) => {
   e.preventDefault();
+
+  const input = document.getElementById("input");
+
 
   const text = input.value;
 
@@ -37,14 +48,22 @@ btn.addEventListener("click", (e) => {
     checkox.type = "checkbox";
     cuadro.appendChild(checkox);
 
-    let spaceText = document.createElement("div");
-    spaceText.id = "spaceText";
+    let h3 = document.createElement("h3")
+ 
     // cuadro.appendChild(spaceText);
-    spaceText.innerHTML = input.value;
+    h3.innerHTML = input.value;
+
+    cuadro.appendChild(h3)
+
+     
+
+   
+    guardarTareas(input.value);
 
     input.value = "";
     quitar.style.display = "none";
 
-    guardarTareas(text);
+  
+    
   }
 });

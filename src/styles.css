@@ -20,16 +20,16 @@ body{
 
 .container{
 
-    background-color: white;
-    width: 500px;
-    height: 400px;
-    margin-left: 30%;
+    background-color: rgb(255, 255, 255);
+    width: 540px;
+    height: 440px;
+    margin-left: 27%;
     border: solid rgb(67, 67, 111) 2px;
     overflow: auto;
 }
 
 .mover{
- margin-left: 30%;
+ margin-left: 27%;
 }
 
 .moverT{
@@ -51,4 +51,5 @@ body{
     margin-bottom: 2%;
     display: grid;
     grid-template-columns: 5% 90% 5%;
+    text-align: center;
 }

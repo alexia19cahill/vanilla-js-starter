@@ -1,4 +1,3 @@
-
 async function verTareas() {
   try {
     const response = await fetch("http://localhost:3000/api/task/");
@@ -11,8 +10,9 @@ async function verTareas() {
 }
 
 async function guardarTareas(tareas) {
+  
   try {
-    console.log(tareas);
+   
     const response = await fetch("http://localhost:3000/api/task/", {
       method: "POST",
       headers: {
@@ -25,10 +25,11 @@ async function guardarTareas(tareas) {
 
     const data = await response.json();
     return data;
-  
   } catch (error) {
     console.error("Error:", error);
   }
 }
 
-export { verTareas,guardarTareas };
+verTareas();
+
+export { verTareas, guardarTareas };
