@@ -55,7 +55,8 @@ btn.addEventListener("click", (e) => {
 
     cuadro.appendChild(h3)
 
-     
+     let botonEliminar = document.createElement("button");
+      botonEliminar.id = "botonEliminar"
 
    
     guardarTareas(input.value);
