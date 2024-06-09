@@ -21,15 +21,15 @@ body{
 .container{
 
     background-color: rgb(255, 255, 255);
-    width: 540px;
-    height: 440px;
-    margin-left: 27%;
-    border: solid rgb(67, 67, 111) 2px;
+    width: 790px;
+    height: 530px;
+    margin-left: 18%;
+    border: solid rgb(0, 0, 0) 2px;
     overflow: auto;
 }
 
 .mover{
- margin-left: 27%;
+ margin-left: 18%;
 }
 
 .moverT{
@@ -42,14 +42,43 @@ body{
 }
 
 #cuadro {
-    border: rgb(252, 188, 188) 2px solid;
+    border: rgb(160, 149, 149) 2px solid;
     border-radius: 3px;
-    width: 94%;
+    width: 85%;
     height: 40px;
     margin-left: 3%;
     margin-top: 2%;
     margin-bottom: 2%;
     display: grid;
     grid-template-columns: 5% 90% 5%;
-    text-align: center;
 }
+
+.deleteboton{
+width: 69;
+height: 32px;
+background-color: rgb(255, 255, 255);
+color: white;
+border: rgb(255, 255, 255) solid 1px ;
+border-radius: 10%;
+margin-left: 110%;
+}
+
+#check {
+    margin-bottom: 17px;
+}
+
+.contador{
+
+border: rgb(23, 22, 22) solid 2px ;
+border-radius: 100%;
+height: 50px;
+width: 50px;
+text-align: center;
+margin-left: 70%;
+}
+
+
+
+
+
+
