@@ -1,3 +1,6 @@
+
+
+// funcion para ver tareas
 async function verTareas() {
   try {
     const response = await fetch("http://localhost:3000/api/task/");
@@ -9,6 +12,7 @@ async function verTareas() {
   }
 }
 
+// funcion para mostrar las tareas
 async function guardarTareas(tareas) {
   try {
     const response = await fetch("http://localhost:3000/api/task/", {
@@ -32,6 +36,7 @@ async function guardarTareas(tareas) {
 
 export { verTareas, guardarTareas, deleteTask };
 
+// funcion para eliminar las tareas 
 function deleteTask(taskId) {
   console.log(taskId);
   fetch(`http://localhost:3000/api/task/${taskId}`, {
@@ -51,23 +56,45 @@ function deleteTask(taskId) {
 }
 
 
-function check() {
- 
-  fetch(`http://localhost:3000/api/task/`, {
-    method: "PUT",
-  })
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error("");
-      }
-      return response.json();
-    })
-    .then(() => {})
-    .catch((error) => {
-      console.error("Error:", error);
-      alert("");
-    });
+// estaba intentando lo del contador
 
+
+// let contadorcito =document.getElementById("contadorcito")
+// function mostrar() {
+//     contadorcito.innerHTML = "Tareas completas : ${check} ";
+
+//   }
+
+//  function check(taskId) {
+ 
+//   fetch(`http://localhost:3000/api/task/${taskId}`, {
+  
+//     method: "PUT",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       "check": "cheked",
+//     }),
+//   })
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw new Error("error");
+//       }
+//       return response.json();
+//     })
+//     .then(() => {
+//       contador++
+//       mostrar()
+//     })
+//     .catch((error) => {
+//       console.error("Error:", error);
+//       alert("");
+//     });
+
+   
     
-}
+
+
+// }
 
